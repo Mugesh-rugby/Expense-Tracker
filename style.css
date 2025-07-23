@@ -1,0 +1,117 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.topbar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  color: #1565c0;
+}
+
+.income-section, .form-section, .filter-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.income-section input,
+.form-section input,
+.form-section select,
+.form-section button {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+}
+
+.form-section .category-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.form-section .category-section span {
+  font-weight: bold;
+}
+
+.income-section button, .form-section button {
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.income-section button:hover, .form-section button:hover {
+  background: #0d47a1;
+}
+
+.filter-section select {
+  padding: 8px;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+}
+
+.transaction-table {
+  margin-top: 20px;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background: #90caf9;
+  color: #fff;
+}
+
+td {
+  background: #e3f2fd;
+}

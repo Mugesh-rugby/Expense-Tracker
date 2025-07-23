@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <header class="topbar">
+      <h1>💸 Expense Tracker (₹)</h1>
+    </header>
+
+    <section class="container">
+      <!-- Total Income -->
+      <div class="income-section">
+        <h3>Enter Total Monthly Income</h3>
+        <input type="number" id="totalIncomeInput" placeholder="Enter Total Income (₹)">
+        <button onclick="setTotalIncome()">ADD</button>
+        <p id="incomeDisplay">Total Income: ₹0</p>
+        <p id="balanceDisplay">Remaining Balance: ₹0</p>
+      </div>
+
+      <!-- Add Expense -->
+      <div class="form-section">
+        <h3>Add Expense</h3>
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="amount" placeholder="Amount (₹)">
+        <div class="category-section">
+          <select id="categoryDropdown">
+            <option value="">-- Select Category --</option>
+            <option value="Food">🍔 Food</option>
+            <option value="Bills">💡 Bills</option>
+            <option value="Shopping">🛍️ Shopping</option>
+            <option value="Transportation">🚗 Transportation</option>
+            <option value="Health">🏥 Health</option>
+            <option value="Entertainment">🎬 Entertainment</option>
+            <option value="Education">📚 Education</option>
+            <option value="Savings">💰 Savings</option>
+          </select>
+          <span>or</span>
+          <input type="text" id="categoryInput" placeholder="Custom Category">
+        </div>
+        <input type="month" id="month">
+        <input type="date" id="date" placeholder="Date">
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+
+      <!-- Filter by Month -->
+      <div class="filter-section">
+        <h3>View Expenses by Month</h3>
+        <select id="monthFilter" onchange="filterByMonth()">
+          <option value="">-- Select Month --</option>
+        </select>
+      </div>
+
+      <!-- Transactions Table -->
+      <div class="transaction-table">
+        <h2>📋 Expenses</h2>
+        <button class="delete-btn" onclick="deleteSelected()">🗑️ Delete Selected</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount (₹)</th>
+              <th>Date</th>
+              <th>Month</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
